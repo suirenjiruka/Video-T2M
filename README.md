@@ -24,6 +24,10 @@ Install the environment:
 ```
 pip install -r requirements.txt
 ```
+Access the pretrained model from [Google Drive](https://drive.google.com/file/d/1UguYU5YSmhOanzPp79AsLxTeyIjPHEZA/view?usp=sharing).
+Download it and unzip the file. Put the keep_net directory into current directory.
+
+
 
 Run the visualize script： 
 ```
@@ -48,8 +52,7 @@ We provides the files we modified in our project, letting users quickly target o
 - dataset_TM_eval.py: enable it loading joint vectors data in Json format.
 - dataset_TM_train.py: enable it loading joint vectors data in Json format.
 - evaluator_wrapper.py: change the process of evaluation, adding an additional process on joint vectors.
-- t2m_trans.py: The core architecture of our model. We add the video-enhanced blocks into the [CrossAttTransBase] class, keeping the same Cross-attention blocks from AttT2M and applying it in our video-enhanced design.
+- t2m_trans.py: The core architecture of our model. We add the video-enhanced blocks into the **CrossAttTransBase** class, keeping the same Cross-attention blocks from AttT2M and applying it in our video-enhanced design.
 - train_t2m_trans.py: change the training process, adding an additional process on joint vectors, and we reduce the batch size due to the limitations of computational resource.
 - vis.py: change the process of generating motion model or skeleton, adding an additional process on joint vectors and changing the testing prompts. The joint vectors used in visualization locate in eval_joints file.
 - Yolo_test.py: We write the new python code to generate the joint vectors by Yolov8 before training or evaluation.  
-
