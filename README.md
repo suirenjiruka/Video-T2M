@@ -1,15 +1,24 @@
 # Video-T2M
 
-## - [Introduction]
+## Introduction
 
+<p align="center">
 We borrow the code from [AttT2M](https://github.com/ZcyMonkey/AttT2M/tree/main), you can check the orginal AttT2M architectur here.
-We propose a video-enhanced blocks integrating an auxiliary joint features to augment the learning from ground truth.An overview on our framework is shown below.  
-We design a simple video-enhanced blocks with MLP and Cross-Attention layer to encode the joint vectors into a simialr feature format with AttT2M's motion and text embedding, subsequently, insert this video-enhanced block before and after the semantic Cross-Attention layers respectively.  
-We fine-tune our video-enhanced blocks and freeze all the other pre-trained parameters from AttT2M to accelerate the process and avoid undermining its performance.  
-In addition, we don't revise the VQVAE encoder-decoder from AttT2M and use its pre-trained model directly.
-<img src="./3-1.jpg" width="500px" alt="Framework Overview">
+We propose a video-enhanced blocks integrating an auxiliary joint features to augment the learning from ground truth. 
 
-### - [Visualization]
+An overview on our framework is shown below.  
+</p>
+<p align="center">
+<img src="./3-1.jpg" width="800px" alt="Framework Overview">
+</p>
+
+<p align="center">
+We design a simple video-enhanced blocks with MLP and Cross-Attention layer to encode the joint vectors into a simialr feature format with AttT2M's motion and text embedding, subsequently, insert this video-enhanced block before and after the semantic Cross-Attention layers respectively.  
+
+We fine-tune our video-enhanced blocks and freeze all the other pre-trained parameters from AttT2M to accelerate the process and avoid undermining its performance. In addition, we don't revise the VQVAE encoder-decoder from AttT2M and use its pre-trained model directly.  
+</p>
+
+### Visualization
 We add an additional video input into AttT2M's visualization code, and you can test it by following instruction.  
 Install the environment:
 ```
@@ -24,14 +33,15 @@ python vis.py
 Please make sure all the paths of imported files are correct in your local environment.  
 You can adjust the temperature parameter α in vis.py to test the influence brought by our video-enhanced block.
 
-## - [Dataset usage]
-
-We use HumanML3D dataset, which inherits from AttT2M, to keep the consistency of training data. the details about them can be found [here](https://github.com/EricGuo5513/HumanML3D) or on the homapage of [AttT2M].  
-HumanML3D provides data generated from two datasets, KIT-ML and AMASS dataset. Since we only use the AMASS dataset for it possess the corresponding video animation, you can ignore the installation of KIT-ML dataset.  
+## Dataset usage
+<p align="center">
+We use HumanML3D dataset, which inherits from AttT2M, to keep the consistency of training data. the details about them can be found [here](https://github.com/EricGuo5513/HumanML3D) or on the homapage of [AttT2M]. HumanML3D provides data generated from two datasets, KIT-ML and AMASS dataset. Since we only use the AMASS dataset for it possess the corresponding video animation, you can ignore the installation of KIT-ML dataset.  
 
 Please note you have to generates the data following the instructions from HumanML3D dataset before you replicate the training process.  
 
-## -[Code review]
+</p>
+
+## Code review
 
 We provides the files we modified in our project, letting users quickly target our contribution.  
 
