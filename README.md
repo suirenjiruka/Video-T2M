@@ -3,7 +3,7 @@
 ## Introduction
 
 We borrow the code from [AttT2M](https://github.com/ZcyMonkey/AttT2M/tree/main), you can check the orginal AttT2M architectur here.
-We propose a video-enhanced blocks integrating an auxiliary joint features to augment the learning from ground truth. 
+We propose a video-enhanced blocks integrating an auxiliary joint features to augment the learning from ground truth. More details can be acceessed in the [paper](https://github.com/suirenjiruka/Video-T2M/blob/main/DDL___Text_to_Motion_enhanced_by_video_based_key_points.pdf)
 
 An overview on our framework is shown below.  
 
